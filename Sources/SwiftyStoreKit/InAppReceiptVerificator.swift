@@ -83,6 +83,7 @@ class InAppReceiptVerificator: NSObject {
             return nil
         } else {
             
+            receiptRefreshRequest?.cancel()
             receiptRefreshRequest = refresh(nil) { result in
                 
                 self.receiptRefreshRequest = nil
@@ -117,3 +118,4 @@ class InAppReceiptVerificator: NSObject {
         }
     }
 }
+
